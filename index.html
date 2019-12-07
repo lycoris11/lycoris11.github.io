@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>Mark Pinto</title>
+        <link rel="stylesheet" href="styles/animate.min.css">
+        <link rel = "stylesheet" type = "text/css" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"/>
+        <link rel = "stylesheet" type = "text/css" href = "styles/style.css"/>
+        <link rel="icon" href="assets/markpinto.ico">
+        <script src="vendors/jQuery/jquery-3.4.1.min.js"></script>
+        <script src="vendors/WOW/wow.min.js"></script>
+        <script src="vendors/Vivus/vivus.js"></script>
+        <script src="vendors/Vivus/pathformer.js"></script>
+        <script src="scripts/main.js"></script>
+    </head>
+    
+    <body>
+
+        <section id = "intro">
+            <!--<h1 id = "llamo">
+                <span class="wow fadeInUp" data-wow-delay="1s">MARK</span> 
+                <span>PINTO</span>
+            </h1>-->
+            <div id = "llamoContainer">
+                <span>
+                    <svg id="my-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="page" x="0px" y="0px" width="32vw" height="32vw" viewBox="0 0 842 595" enable-background="new 0 0 842 595" xml:space="preserve"><defs/>
+                            <path transform="matrix(1 0 0 1 273.99413735343387 388.6934673366834)" stroke-miterlimit="3" stroke="#fff" stroke-width="4" fill="#FFFFFF" d="M0,0 L61.792294807370126,-203.31658291457285 "/>
+                            <path transform="matrix(1 0 0 1 335.786432160804 185.37688442211058)" stroke-miterlimit="3" stroke="#fff" stroke-width="4" fill="#FFFFFF" d="M0,0 L43.85259631490783,200.32663316582912 "/>
+                            <path transform="matrix(1 0 0 1 379.6390284757118 385.7035175879397)" stroke-miterlimit="3" stroke="#fff" stroke-width="4" fill="#FFFFFF" d="M0,0 L64.78224455611394,-193.3500837520938 "/>
+                            <path transform="matrix(1 0 0 1 444.42127303182576 192.3534338358459)" stroke-miterlimit="3" stroke="#fff" stroke-width="4" fill="#FFFFFF" d="M0,0 L-1.9932998324958362,357.79731993299833 "/>
+                            <path transform="matrix(1 0 0 1 444.42127303182576 192.3534338358459)" stroke-miterlimit="3" stroke="#fff" stroke-width="4" fill="#FFFFFF" d="M0,0 L118.60134003350083,109.63149078726971 "/>
+                            <path transform="matrix(1 0 0 1 563.0226130653266 301.9849246231156)" stroke-miterlimit="3" stroke="#fff" stroke-width="4" fill="#FFFFFF" d="M0,0 L-119.77282222624683,100.64956281062632 "/>
+                    </svg>-
+                </span>
+
+                <span id = "faceHolder">
+                    <img class = "animated bounceInRight" style = "-webkit-animation-delay: 1s;animation-delay: 1s; -webkit-animation-duration: 1s; animation-duration: 1s" src = "assets/unnamed1.jpg" id = "myBeautifulFace">
+                </span>
+                <h1 id = "llamo" class="wow fadeInUp" data-wow-delay="1s">MARK <span class="wow fadeIn" style="-webkit-animation-delay: 1750ms;animation-delay: 1750ms">PINTO</span>
+                </h1>
+                <a class = "animated fadeInDown" style = "-webkit-animation-delay: 2s;animation-delay: 2s" href = "#aboutMe">
+                    <span class = "fa-stack fa-lg">
+                        <i class="fa fa-circle-thin fa-stack-2x" aria-hidden="true"></i>
+                        <i class="fa fa-angle-double-down fa-stack-1x" aria-hidden="true"></i>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <section id = "aboutMe">
+            <div id = "aboutMeContainer">
+                <h1 id = "boutMe" class="wow fadeInUp" data-wow-delay="250ms">ABOUT <span class="wow fadeIn" data-wow-delay="500ms">ME</span></h1>
+                <div id = "paragraph" class="wow fadeInUp" data-wow-delay="250ms">
+                    <p>Hey there! I'm Mark, and I'm currently studying Computer Science Engineering at The Ohio State University. I really enjoy cooking, listening to music and going to concerts and fests. I like to keep fit, staying healthy is important to me. I've worked within an Agile Scrum team of six full time developers building a Serverless, cloud-native business application. I have experience in all aspects of the development life cycle. (Writing and reviewing stories, code development and review, testing, automation, and deployment). My main interests lie in artificial intelligence, machine learning, data science and cybersecurity.</p>
+                </div>
+                <div id = "checkOut" class="wow fadeInUp" data-wow-delay="250ms">
+                    <a href = "#projects">Check out my resume below!</a>
+                </div>
+            </div>
+        </section>
+
+        <section id = "resume">
+            <div id = "resumeContainer">
+                <h1 id = "muhProjects" class="wow fadeInUp" data-wow-delay="200ms" >MY RESUME</h1>
+                <iframe class="wow fadeInUp" data-wow-delay="400ms" src="https://resume.creddle.io/embed/aekba58go1c" width="850" height="1100" scrolling="no" align = "middle"></iframe>
+            </div>
+        </section>
+
+        <script>
+            $(function() {
+                $('a[href*="#"]:not([href="#"])').click(function() {
+                    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                        if (target.length) {
+                            $('html, body').animate({
+                            scrollTop: target.offset().top
+                            }, 1000);
+                            return false;
+                        }
+                    }
+                });
+            });
+
+            new Vivus('my-svg', {duration: 130});
+        </script>
+    </body>
+</html>

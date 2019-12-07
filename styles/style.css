@@ -1,0 +1,186 @@
+@CHARSET "UTF-8";
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:300);
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+::selection{
+	background: #ffb7b7;
+	color: #fff
+}
+
+::-moz-selection{
+	background: #ffb7b7;
+	color: #fff;
+}
+
+section{
+	height: 100vh;
+}
+
+#intro{
+	background: #bd8282;
+}
+
+#aboutMe{
+	background: #2d2d2d;
+}
+
+#llamo{
+	color: #fff;
+	font-size: 6vw;
+	font-family: "Merriweather", sans-serif;
+	font-weight: 400;
+}
+
+#boutMe{
+	color: #bd8282;
+	font-size: 4vw;
+	font-family: "Merriweather", sans-serif;
+	font-weight: 400;
+}
+
+#llamoContainer{
+	padding-top: 5vh; 
+	padding-left:6vw;
+}
+
+#llamoContainer a span{
+	color:#fff;
+}
+
+#llamoContainer a span:hover{
+	opacity: .5;
+}
+
+#aboutMeContainer{
+	/*padding-left:6vw;
+	padding-right:6vw;
+	padding-top:4vh;*/
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+#aboutMeContainer a{
+	color:#bd8282;
+	padding-top: 5%;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	text-decoration: none;
+	font-size:2vw;
+}
+
+#aboutMeContainer a:hover{
+	opacity: .5;
+}
+
+#paragraph{
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	color: #fff;
+	line-height: 250%;
+	padding-top: 5%;
+}
+
+#checkOut{
+	padding-top: 10%;
+}
+
+th{
+	width:25%;
+    padding-top: 2.5%;
+}
+
+table{
+	width:100%;
+}
+
+table th div{
+	background: rgb(31, 22, 39);
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	border-radius: 0px;
+	box-shadow: 5px 5px 5px #ababab;
+	    padding-top: 5%;
+}
+
+.cardHeader{
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	color: #bd8282;
+	padding-top: 5%;
+	font-size: 3vw;
+}
+
+.cardHeader:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+table tr th div a{
+	text-decoration: none;
+}
+
+.blurb{
+	padding-top: 6%;
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+	color: #fff;
+	line-height: 200%;
+	margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.cardDivider{
+	width: 50%;
+    border: 1px solid #fff;
+    margin-left: 25%;
+}
+
+#muhProjects{
+	color: #bd8282;
+	font-size: 4vw;
+	font-family: "Merriweather", sans-serif;
+	font-weight: 400;
+	text-align: center;
+	padding-top: 2.5%;
+}
+
+ul li{
+	display:inline;
+}
+
+ul li a{
+	text-decoration: none;
+}
+
+#resumeContainer{
+	text-align: center;
+	background-color: #9c3939;
+}
+
+iframe{
+	overflow-y: hidden;
+	border: none;
+}
+
+#myBeautifulFace{
+	width: 20%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#faceHolder{
+	padding-left: 20%;
+}
