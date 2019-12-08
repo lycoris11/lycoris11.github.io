@@ -1,9 +1,13 @@
-html{
-	overflow-x: hidden;
-}
+
 
 body{
 	background-color:black;
+	overflow: hidden;
+    overflow-y: auto;
+}
+
+:root {
+  --vh: 1vh;
 }
 
 input:focus,
