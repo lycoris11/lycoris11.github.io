@@ -26,4 +26,9 @@ $(document).ready(function () {
     $('#whoopsModal').on('shown.bs.modal', function () {
         $('#modalInput').trigger('focus');
     })
+
+    $(window).scroll(function(){
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
 });
