@@ -31,4 +31,12 @@ $(document).ready(function () {
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
+
+    //close modal and scroll down
+    $("#contactModal").click(function () {
+        $('#whoopsModal').modal('hide');
+        $('html, body').animate({
+            scrollTop: $("#contactForm").offset().top
+        }, 2000);
+    });
 });
