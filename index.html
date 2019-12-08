@@ -42,7 +42,7 @@
                 <div class="row">
                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-centered ">
                         <div id="name">
-                            <h1 class="wow fadeInUp text-light display-2" data-wow-delay="1s">
+                            <h1 class="wow fadeInUp text-light heading" data-wow-delay="1s">
                                 MARK 
                                 <span class="wow fadeIn" style="-webkit-animation-delay: 1750ms;animation-delay: 1750ms">
                                     PINTO
@@ -54,20 +54,26 @@
                 <div class="row">
                     <div class="col col-centered align-middle">
                         <div class="row justify-content-center">
-                            <div class="col-lg-3 col-md-6 col-sm-12 animated fadeIn" style="-webkit-animation-delay: 2s;animation-delay: 2s"">
-                                <a href="#arrow" type="link" class="button btn btn-light btn-block">About</a>
+                            <div class="col-lg-3 col-md-12 col-sm-12 animated fadeIn" style="-webkit-animation-delay: 2s;animation-delay: 2s"">
+                                <a id="aboutButton" href="#arrow" type="link" class="button btn btn-light btn-block">About</a>
+                                <a id="aboutButton2" href="#aboutButton2" type="link" class="button btn btn-light btn-block">About</a>
                             </div>
-                            <div class="col-lg-3 col-md-6 col-sm-12 animated fadeIn" style="-webkit-animation-delay: 2.25s;animation-delay: 2.25s"">
+                            <div class="col-lg-3 col-md-12 col-sm-12 animated fadeIn" style="-webkit-animation-delay: 2.25s;animation-delay: 2.25s"">
                                 <a href="#myProjects" class="button btn btn-light btn-block">Projects</a>
                             </div>
-                            <div class="col-lg-3 col-md-6 cl-sm-12 animated fadeIn" style="-webkit-animation-delay: 2.75s;animation-delay: 2.75s"">
+                            <div class="col-lg-3 col-md-12 cl-sm-12 animated fadeIn" style="-webkit-animation-delay: 2.75s;animation-delay: 2.75s"">
                                 <a href="#contactForm" class="button btn btn-light btn-block">Contact</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-centered">
-                        <div id="arrow" class="">
-                            <a  href="#arrow" id="downArrow" class="animated fadeInDown" style="-webkit-animation-delay: 2s;animation-delay: 2s">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-centered mt-xl-0 mt-lg-0 mt-md-5 mt-sm-5 mt-5 arrowContainer">
+                        <div id="arrow">
+                            <a href="#arrow" id="downArrow" class="animated fadeInDown" style="-webkit-animation-delay: 2s;animation-delay: 2s">
+                                <div class="fa-stack fa-lg">
+                                <i class="fa fa-circle-thin fa-stack-2x" aria-hidden="true"></i>
+                                <i class="fa fa-angle-double-down fa-stack-1x" aria-hidden="true"></i>
+                                </div>
+                            <a href="#aboutButton2" id="downArrow2" class="animated fadeInDown" style="-webkit-animation-delay: 2s;animation-delay: 2s">
                                 <div class="fa-stack fa-lg">
                                     <i class="fa fa-circle-thin fa-stack-2x" aria-hidden="true"></i>
                                     <i class="fa fa-angle-double-down fa-stack-1x" aria-hidden="true"></i>
@@ -83,7 +89,7 @@
                 <div>
                     <div class="row justify-content-center">
                         <div class="col-6 col-centered">
-                            <h1 id="aboutMe" class="wow fadeInUp" style="color:palegoldenrod" data-wow-delay="400ms">About Me</h1>
+                            <h2 id="aboutMe" class="wow fadeInUp" style="color:palegoldenrod" data-wow-delay="400ms">About Me</h2>
                         </div>
                     </div>
                     <div class="row justify-content-center">
@@ -111,7 +117,7 @@
             </div>
 
             <!--Projects-->
-            <div id="myProjects" class="container section ">
+            <div id="myProjects" class="container-fluid section ">
                 <div class="wow slideInLeft" data-wow-delay="250ms">
                     <div class="inlineBlinkerSibling">
                         <h1 class="projectsTitle">&ltcode></h1>

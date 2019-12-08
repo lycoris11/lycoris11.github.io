@@ -8,7 +8,7 @@ $(window).scroll(function() {
         $('#wrapper').addClass('colorOne').removeClass('colorTwo');
     } else if ($(this).scrollTop() <= 800) {
         $('#wrapper').addClass('colorTwo').removeClass('colorThree');
-    } else if ($(this).scrollTop() <= 1000) {
+    } else if ($(this).scrollTop() >= 2000) {
         $('#wrapper').addClass('colorThree').removeClass('colorOne');
     } else {
         $('#wrapper').addClass('colorThree');
