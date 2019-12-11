@@ -3,7 +3,6 @@
 new WOW().init();
 
 var hash = "382132701c4733c3402706cfdd3c8fc7f41f80a88dce5428d145259a41c5f12f";
-
 //Background Color Change
 $(window).scroll(function() {
     if ($(this).scrollTop() <= 450) {
@@ -43,7 +42,7 @@ $(document).ready(function () {
             scrollTop: $("#contactForm").offset().top
         }, 2000);
     });
-
+    
     //Simulates typing
     $(document).on('keyup', function (e) {
         //console.log(e.keyCode)
