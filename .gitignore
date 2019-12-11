@@ -1,0 +1,10 @@
+#OS Generated Files
+.DS_Store
+.DS_Store?
+
+#Not used
+./assets/markpinto.svg
+
+#Not Needed
+./package.json
+./package-lock.json
