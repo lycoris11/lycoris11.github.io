@@ -1,0 +1,93 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+
+export const meta = {
+  author: 'Mark Pinto',
+  date: '2023-06-20',
+  title: 'From PDF to SQL Injection: How I Secured My NextJS Web App with Input Sanitization',
+  description:
+    'The most common entrypoint for SQL Injection is a text box, but what about a file?',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+## Exposition
+
+As a software engineer, I recently encountered an unexpected security threat while building a web app (stack: Next.JS + TailwindCSS + Serverless Lambda Architecture + PostgreSQL database to store persistent user data). One of my apps components allows a user to upload a PDF file. The text is then extracted from this file and then saved to the database. After implementing this feature, I soon realized that this functionality opened the door to potential SQL injection attacks!
+
+## Issue
+A threat agent could upload PDFs with malicious SQL code and exploit my app's input validation process, compromising user data.
+
+1. Basic SQL injection example:
+```SQL
+SELECT * FROM users_table WHERE username = '' OR '1'='1';
+```
+In this example, assume that a web application is vulnerable to SQL injection in the login functionality. By entering `' OR '1'='1'` into the username field, an attacker can manipulate the SQL query to always return true.
+
+
+2. Retrieving all data from a table:
+```SQL
+SELECT * FROM users_table; DROP TABLE users_table; --
+```
+In this example, the attacker uses a technique called "SQL injection with multiple queries" to execute another SQL statement (`DROP TABLE users_table`) after retrieving all the data from the `users_table`. The double dash `--` is used to comment out the remaining part of the original query and prevent any syntax errors.
+
+3. Deleting a table:
+```SQL
+DELETE FROM products WHERE id = 5; DROP TABLE products; --
+```
+Here, by injecting SQL code `5; DROP TABLE products; --` into the `id` parameter, the attacker can perform both a delete operation and drop the entire `products` table.
+
+4. Modifying database records:
+```SQL
+UPDATE users SET password = 'new-password' WHERE username = 'admin';
+```
+In this example, the attacker changes the password of the `admin` user by injecting the string `'new-password'` into the parameter used for updating the password field.
+
+5. Extracting sensitive information:
+```SQL
+SELECT username, password FROM users_table WHERE id = 1 UNION ALL
+SELECT credit_card_number, NULL FROM credit_cards_table;
+```
+In this example, the attacker uses the `UNION ALL` operator to combine the result set from the first query (`SELECT username, password FROM users_table WHERE id = 1`) with another query that extracts credit card numbers from the `credit_cards_table`. This technique allows the attacker to gather sensitive data from different tables in a single malicious query.
+
+Please note that these examples are for educational purposes only. Performing SQL injection attacks on any system without proper authorization is illegal and unethical. Always ensure you have permission from the system owner before attempting any security testing.
+
+## Prevention
+To prevent this, I took steps to sanitize and parameterize the extracted text input. 
+
+```python
+#Input sanitization function
+def escape_string_literals(s):
+  s = s.replace("'", "''") #Escape single quotes
+  s = s.replace("\\", "\\\\") #Escape backslash
+  s=re.sub(r"([\b\f\n\r\t])", r"\\\1", s) #Escape special characters
+  return s
+```
+
+```python
+jd_query = '''INSERT INTO jd (id1, id2, name, text) VALUES (:id1, :id2, :name, :text);'''
+
+params = [
+    {
+        'name': 'id1',
+        'value': {'stringValue': id1}
+    },
+    {
+        'name': 'id2',
+        'value': {'stringValue': id2}
+    },
+    {
+        'name': 'name',
+        'value': {'stringValue': name}
+    },
+    {
+        'name': 'text',
+        'value': {'stringValue': text}
+    }
+]
+```
+
+It's essential to understand that SQL injections are no joke and can cause significant damage to your web app's functionality and security.
+
+## Final Thoughts
+In conclusion, it's crucial to take web app security seriously. As developers, we must ensure that we are doing everything within our power to protect our app's functionality and user data. Let's stay vigilant and keep our apps safe and secure!
