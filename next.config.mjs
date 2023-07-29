@@ -12,11 +12,18 @@ const nextConfig = {
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.module.rules.push({
-        test: /\.(md|mdx)$/,
-        use: 'raw-loader',
+        test: /\.mdx$/,
+        use: [
+          "babel-loader",
+          {
+            loader: "@mdx-js/loader",
+            options: {
+              remarkPlugins: [],
+            },
+          },
+        ],
       });
     }
-    return config;
   },
 };
 
