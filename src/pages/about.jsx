@@ -61,11 +61,11 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I'm Mark Pinto. I live in Chicago, where I envision a better world with code.
+              I&apos;m Mark Pinto. I live in Chicago, where I envision a better world with code.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                My focus in life is eudaimonia. I love traveling around the world and I've experienced many diverse cultures (Tokyo, Munich, Prague, London, Paris, etc.)
+                My focus in life is eudaimonia. I love traveling around the world and I&apos;ve experienced many diverse cultures (Tokyo, Munich, Prague, London, Paris, etc.)
               </p>
               <p>
                 I enjoy learning, rock climbing (bouldering), live music events (EDM and punk!), fitness, riveting conversation, and introspection.
@@ -74,8 +74,8 @@ export default function About() {
                 I fell in love with code when I was 14 years old. I was a kid who loved to tinker and build things. I was fascinated by the idea that I could build anything I wanted with code.
               </p>
               <p>
-                Today, I'm a software engineer. Currently I'm working on an we're working on
-                an app to supercharge the recruitment process. I'm harnessing the potential of Large Language Models
+                Today, I&apos;m a software engineer. Currently I&apos;m working on an we&apos;re working on
+                an app to supercharge the recruitment process. I&apos;m harnessing the potential of Large Language Models
                 and Generative AI, powered by GPT-3.5, to effortlessly compare resumes and job descriptions.
               </p>
             </div>
