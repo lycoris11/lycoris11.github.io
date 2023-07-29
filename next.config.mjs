@@ -1,6 +1,6 @@
-import rehypePrism from '@mapbox/rehype-prism'
-import nextMDX from '@next/mdx'
-import remarkGfm from 'remark-gfm'
+import rehypePrism from '@mapbox/rehype-prism';
+import nextMDX from '@next/mdx';
+import remarkGfm from 'remark-gfm';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -9,7 +9,16 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
-}
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.module.rules.push({
+        test: /\.(md|mdx)$/,
+        use: 'raw-loader',
+      });
+    }
+    return config;
+  },
+};
 
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
@@ -17,6 +26,6 @@ const withMDX = nextMDX({
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypePrism],
   },
-})
+});
 
-export default withMDX(nextConfig)
+export default withMDX(nextConfig);
