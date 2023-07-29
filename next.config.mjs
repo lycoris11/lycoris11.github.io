@@ -20,3 +20,4 @@ const withMDX = nextMDX({
 })
 
 export default withMDX(nextConfig)
+
