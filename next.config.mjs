@@ -9,25 +9,6 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.module.rules.push({
-        test: /\.mdx$/,
-        use: [
-          "babel-loader",
-          {
-            loader: "@mdx-js/loader",
-            options: {
-              remarkPlugins: [remarkGfm],
-              rehypePlugins: [rehypePrism],
-            },
-          },
-        ],
-      });
-    }
-
-    return config;
-  },
 }
 
 const withMDX = nextMDX({
