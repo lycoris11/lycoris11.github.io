@@ -32,10 +32,7 @@ const withMDX = nextMDX({
   },
   assetPrefix: assetPrefix,
   basePath: basePath,
-  images: {
-    loader: 'imgix',
-    path: 'vmp-462353873.imgix.net',
-  },
+  images.unoptimized = true
 
 })
 
