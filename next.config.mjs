@@ -32,6 +32,11 @@ const withMDX = nextMDX({
   },
   assetPrefix: assetPrefix,
   basePath: basePath,
+  images: {
+    loader: 'imgix',
+    path: 'vmp-462353873.imgix.net',
+  },
+
 })
 
 export default withMDX(nextConfig)
