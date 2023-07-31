@@ -32,8 +32,9 @@ const withMDX = nextMDX({
   },
   assetPrefix: assetPrefix,
   basePath: basePath,
-  images.unoptimized = true
-
+  images: {
+    unoptimized: true,
+  },
 })
 
 export default withMDX(nextConfig)
