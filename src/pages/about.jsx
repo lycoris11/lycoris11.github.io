@@ -74,7 +74,7 @@ export default function About() {
                 I fell in love with code when I was 14 years old. I was a kid who loved to tinker and build things. I was fascinated by the idea that I could build anything I wanted with code.
               </p>
               <p>
-                Today, I&apos;m a software engineer. Currently I&apos;m working on an we&apos;re working on
+                Today, I&apos;m a software engineer. Currently I&apos;m working on a web
                 an app to supercharge the recruitment process. I&apos;m harnessing the potential of Large Language Models
                 and Generative AI, powered by GPT-3.5, to effortlessly compare resumes and job descriptions.
               </p>
