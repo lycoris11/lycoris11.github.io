@@ -19,32 +19,32 @@ As a software engineer, I recently encountered an unexpected security threat whi
 A threat agent could upload PDFs with malicious SQL code and exploit my app's input validation process, compromising user data.
 
 1. Basic SQL injection example:
-```SQL
+```sql
 SELECT * FROM users_table WHERE username = '' OR '1'='1';
 ```
 In this example, assume that a web application is vulnerable to SQL injection in the login functionality. By entering `' OR '1'='1'` into the username field, an attacker can manipulate the SQL query to always return true.
 
 
 2. Retrieving all data from a table:
-```SQL
+``` sql
 SELECT * FROM users_table; DROP TABLE users_table; --
 ```
 In this example, the attacker uses a technique called "SQL injection with multiple queries" to execute another SQL statement (`DROP TABLE users_table`) after retrieving all the data from the `users_table`. The double dash `--` is used to comment out the remaining part of the original query and prevent any syntax errors.
 
 3. Deleting a table:
-```SQL
+```sql
 DELETE FROM products WHERE id = 5; DROP TABLE products; --
 ```
 Here, by injecting SQL code `5; DROP TABLE products; --` into the `id` parameter, the attacker can perform both a delete operation and drop the entire `products` table.
 
 4. Modifying database records:
-```SQL
+```sql
 UPDATE users SET password = 'new-password' WHERE username = 'admin';
 ```
 In this example, the attacker changes the password of the `admin` user by injecting the string `'new-password'` into the parameter used for updating the password field.
 
 5. Extracting sensitive information:
-```SQL
+```sql
 SELECT username, password FROM users_table WHERE id = 1 UNION ALL
 SELECT credit_card_number, NULL FROM credit_cards_table;
 ```
