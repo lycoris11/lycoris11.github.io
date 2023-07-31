@@ -7,8 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "predeploy": "npm run build",
-    "deploy": "master -d build"
+    "export": "next export"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
