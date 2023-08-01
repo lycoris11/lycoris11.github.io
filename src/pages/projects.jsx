@@ -15,7 +15,7 @@ const projects = [
     description:
       'Generative A.I. + Large Language Models Meet Recruiting.',
     link: { href: 'https://github.com/lycoris11/hirewise-ai/', label: 'github.com' },
-    logo: logoPlanetaria,
+    logo: logoHelioStream,
   },
   {
     name: 'Automated Betting',
