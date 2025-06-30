@@ -12,6 +12,8 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
+import discoverlogo from '@/images/logos/discover.jpg'
+import outlierlogo from '@/images/logos/outlier.jpg'
 import selfemployedlogo from '@/images/logos/self-employed.jpg'
 import lawlogo from '@/images/logos/law.png'
 import epsilonlogo from '@/images/logos/epsilon.jpeg'
@@ -140,18 +142,32 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Epsilon',
-      title: 'Associate Client Integration Engineer',
-      logo: epsilonlogo,
-      start: '2021',
+      company: 'Discover Financial Services',
+      title: 'Application Engineer',
+      logo: discoverlogo,
+      start: 'Sep 2023',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
     },
     {
+      company: 'Outlier AI',
+      title: 'Software Engineer - AI Training (Part-Time)',
+      logo: outlierlogo,
+      start: 'Apr 2024',
+      end: 'Jun 2024',
+    },
+    {
+      company: 'Epsilon',
+      title: 'Associate Client Integration Engineer',
+      logo: epsilonlogo,
+      start: 'Jun 2021',
+      end: 'Sep 2023',
+    },
+    {
       company: 'eLPS, LLC',
-      title: 'Lead Front End Software Engineer (Contract)',
+      title: 'Software Engineer (Contract)',
       logo: lawlogo,
       start: 'Jan 2021',
       end: 'May 2021'
