@@ -8,6 +8,13 @@ import logoHelioStream from '@/images/logos/helio-stream.svg'
 
 const projects = [
   {
+    name: 'Agentic Workflow',
+    description:
+      'AI Generated and automated 3-Day Weather Report Generator & Uploader',
+    link: { href: 'https://github.com/lycoris11/ai-agent', label: 'github.com' },
+    logo: logoAnimaginary,
+  },
+  {
     name: 'Hirewise AI',
     description:
       'Generative A.I. + Large Language Models Meet Recruiting.',
@@ -63,7 +70,7 @@ export default function Projects() {
                 />
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <Card.Link href={project.link.href}>{project.name}</Card.Link>
+                <Card.Link target="_blank" href={project.link.href}>{project.name}</Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-teal-500 dark:text-zinc-200">
